@@ -1,5 +1,5 @@
 @use "_color.scss" as *;
-
+@use "_size.scss" as *;
 *,
 *::before,
 *::after {
@@ -15,4 +15,88 @@ html {
 
 body {
 	font-family: "Roboto", sans-serif;
+	background-color: $darker-bg;
+}
+
+//NAVIGATION
+.nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 8vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+	justify-content: center;
+	background-color: $darker-bg;
+	z-index: 100;
+
+	ul {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		list-style-type: none;
+		transform: translateX(-100%);
+		transition: transform 0.3s;
+		li {
+			margin-bottom: 3em;
+		}
+		z-index: -1;
+	}
+	&__link {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: $large-text;
+		text-decoration: none;
+		color: white;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			background-color: $main-color;
+			width: 100%;
+			height: 2px;
+			transform: scale(0);
+			transition: transform 0.3s;
+		}
+		&:hover {
+			&::before {
+				transform: scale(1);
+			}
+		}
+		&:focus {
+			&::before {
+				transform: scale(1);
+			}
+		}
+	}
+	h1 {
+		justify-self: center;
+		text-transform: uppercase;
+	}
+	&__heading {
+		text-decoration: none;
+		color: white;
+		font-size: 1.8rem;
+	}
+	.hamburger {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.active {
+		transform: translateX(0);
+	}
 }

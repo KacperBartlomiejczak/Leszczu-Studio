@@ -11,23 +11,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- CSS LINK -->
+    <link rel="stylesheet" href="./dist/css/burger.min.css">
     <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
 <body>
-
-    <div class="nav nav-mobile">
+    <!-- NAVIGATION MOBILE -->
+    <nav class="nav nav-mobile">
         <h1><a href="#" class="nav__heading">Leszczu Studio</a></h1>
-        <ul>
-            <li><a href="" class="nav__links"></a></li>
-            <li><a href="" class="nav__links"></a></li>
-            <li><a href="" class="nav__links"></a></li>
-            <li><a href="" class="nav__links"></a></li>
-            <li><a href="" class="nav__links"></a></li>
+        <button class="hamburger hamburger--slider" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <ul class="nav__links">
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">Oferta</a></li>
+            <li><a href="#" class="nav__link">Umiejętności</a></li>
+            <li><a href="#" class="nav__link">Kontakt</a></li>
         </ul>
 
-    </div>
+    </nav>
 
+    <!-- HEADER -->
+    <header class="header"></header>
+
+
+    <!-- SCRIPTS -->
+    <script src="./dist/js/main.min.js"></script>
 </body>
 
 </html>
