@@ -1,0 +1,11 @@
+@keyframes bounceing {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    99%{
+        transform: translateY(0px);
+    }
+}
