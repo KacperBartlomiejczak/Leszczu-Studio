@@ -179,9 +179,11 @@ body {
 		height: 150px;
 		justify-self: center;
 		object-position: 0px 0;
+		object-fit: cover;
 		border-radius: 50%;
 		border: 5px solid white;
 	}
+
 	&__wrapper {
 		display: grid;
 		justify-content: center;
@@ -223,6 +225,118 @@ body {
 	}
 }
 
+//Offer
+.offer {
+	min-height: 90vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.1fr 1fr;
+	background-color: $light-bg;
+	&__icons {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 2fr 1fr 2fr 1fr 2fr;
+		justify-content: center;
+		align-items: center;
+		margin: 1em 0 2em 0;
+	}
+	.fa-solid {
+		font-size: 2.5rem;
+		color: white;
+		background-color: $main-color;
+		border-radius: 50%;
+		padding: 1em;
+		transition: transform 0.3s;
+		&:hover,
+		&:focus {
+			transform: scale(1.2);
+		}
+	}
+	&__line {
+		width: 50px;
+		height: 50px;
+		justify-self: center;
+		background-image: url("../../dist/img/svg/arrow-down.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		animation: bounceing 1s ease-out 0s infinite both;
+	}
+	&__wrapper {
+		width: 70%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		justify-self: center;
+		text-align: center;
+		color: white;
+	}
+	.fa-solid {
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		font-size: 1.8rem;
+		margin-bottom: 0.2em;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	&__des {
+		font-size: 1.2rem;
+	}
+}
+
+//Cons
+.cons {
+	height: 70vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	background-color: $lighter-bg;
+	&__card {
+		width: 70%;
+		height: 450px;
+		display: grid;
+		grid-template-rows: 5fr 1fr 1fr;
+		grid-template-columns: 1fr;
+		justify-self: center;
+		background-color: #495761;
+		border-radius: 10px;
+		&-title {
+			color: #313a41;
+		}
+	}
+	&__list {
+		position: relative;
+		list-style-type: none;
+		margin: 1em 0 1em 2em;
+	}
+	&__item {
+		margin-bottom: 0.5em;
+		font-size: 1.2rem;
+		color: white;
+	}
+	&__img {
+		background-image: url("../../dist/img/card-bg-mini.jpg");
+		background-position: 0px -130px;
+		background-size: cover;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	&__wrapper {
+		margin: 1em 0 0 1em;
+	}
+	&__text {
+		align-self: end;
+		font-size: 1.8rem;
+		color: white;
+		text-transform: uppercase;
+	}
+}
+
 //Components
 .heading {
 	position: relative;
@@ -230,12 +344,11 @@ body {
 	grid-row: 1/2;
 	justify-self: center;
 	color: white;
+	margin: 1em;
 	font-size: $small - 0.5rem;
 	text-transform: uppercase;
-	margin: 1em 0;
 	z-index: 5;
 	transition: color 0.3s;
-
 	&::before {
 		content: "";
 		position: absolute;
@@ -253,6 +366,11 @@ body {
 }
 
 .site-btn {
+	width: 170px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: white;
 	text-decoration: none;
 	text-transform: uppercase;
